@@ -1,0 +1,264 @@
+:root {
+  --clr-primary-700:hsl(300, 43%, 22%);
+  --clr-primary-300:hsl(333, 80%, 67%);
+  --clr-neutral-100: hsl(303, 10%, 53%);
+  --clr-neutral-200: hsl(300, 24%, 96%);
+  --clr-neutral-300: hsl(0, 0%, 100%);
+  --ff-primary:"spartan", sans-serif;
+  --fs-400: 0.8125rem;
+  --fs-500: 0.9625rem;
+  --fs-900: 2rem;
+  --br: .5rem;
+}
+@media (min-width: 50em) {
+  :root {
+    --fs-900: 3rem;
+  }
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default padding */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Remove list styles on ul, ol elements with a class attribute */
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+body {
+  font-family: var(--ff-primary);
+  font-size: var(--fz-400);
+  padding-top: 80px;
+  text-align: center;
+  background-image: url("../images/bg-pattern-top-desktop.svg"), url("../images/bg-pattern-bottom-desktop.svg");
+  background-position: top left, bottom right;
+  background-repeat: no-repeat;
+  background-size: max(50%, 400px);
+}
+@media (min-width: 50em) {
+  body {
+    padding-top: 7.5rem;
+  }
+}
+
+h1 {
+  font-size: var(--fs-900);
+  color: var(--clr-primary-700);
+  line-height: 1;
+  max-width: 12ch;
+  margin-bottom: 0.25em;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: 800;
+}
+@media (min-width: 50em) {
+  h1 {
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 16px;
+  }
+}
+
+.lead {
+  font-size: var(--fs-500);
+}
+
+main {
+  display: grid;
+  gap: 3rem 1rem;
+}
+
+@media (min-width: 50em) {
+  main {
+    grid-template-columns: 1fr 1.5fr;
+    text-align: left;
+  }
+
+  .intro {
+    grid-column: 1/2;
+  }
+
+  .ratings {
+    grid-column: 2/3;
+    align-self: center;
+  }
+
+  .quotes {
+    grid-column: 1/-1;
+  }
+}
+.container {
+  max-width: 70rem;
+  padding: 0 32px;
+  margin: 0 auto;
+}
+
+.flow-content > * + * {
+  margin-top: var(--flow-space, 1rem);
+}
+
+.split {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+@media (min-width: 50em) {
+  .split {
+    flex-direction: row;
+  }
+}
+
+.a-center {
+  align-items: center;
+}
+
+.ratings {
+  line-height: 1;
+  padding-bottom: 10px;
+}
+.ratings li {
+  background: var(--clr-neutral-200);
+  color: var(--clr-primary-700);
+  font-weight: 800;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0.75rem 2rem;
+  border-radius: var(--br);
+  max-width: 25rem;
+}
+@media (min-width: 50em) {
+  .ratings li {
+    display: flex;
+    align-items: center;
+  }
+  .ratings li::before {
+    margin: 0 1.5rem 0 0;
+  }
+  .ratings li:first-of-type {
+    transform: translateX(-3rem);
+  }
+  .ratings li:last-of-type {
+    transform: translateX(3rem);
+  }
+}
+@media (min-width: 50em) {
+  .ratings .review {
+    font-size: 14px;
+  }
+}
+.ratings img {
+  margin: 0 0.5rem 0.5rem;
+}
+@media (min-width: 50em) {
+  .ratings img {
+    margin: -0.25rem 0.5rem 0 0;
+  }
+}
+.ratings .stars {
+  display: flex;
+  justify-content: center;
+}
+
+.quotes {
+  --space: 32px;
+}
+.quotes li:nth-child(2) {
+  transform: translateY(3rem);
+}
+.quotes li:nth-child(3) {
+  transform: translateY(6rem);
+}
+.quotes blockquote {
+  background: var(--clr-primary-700);
+  color: var(--clr-neutral-200);
+  text-align: left;
+  border-radius: var(--br);
+  padding: 32px;
+  max-width: 25rem;
+  height: 100%;
+  margin: 0 auto;
+}
+.quotes img {
+  width: 3rem;
+  border-radius: 50%;
+}
+@media (min-width: 50em) {
+  .quotes img {
+    margin-right: var(--space);
+  }
+}
+.quotes .name {
+  font-weight: 700;
+}
+.quotes .status {
+  color: var(--clr-primary-300);
+}
+.quotes .quote {
+  margin-top: var(--space);
+}
+
+/*# sourceMappingURL=style.css.map */
