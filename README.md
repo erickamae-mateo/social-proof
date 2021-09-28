@@ -2,6 +2,40 @@
 Frontendmentor.io challenge for newbie
 # Frontend Mentor - Social proof section solution
 
+# Front-end Style Guide
+
+	## Layout
+
+	The designs were created to the following widths:
+
+	- Mobile: 375px
+	- Desktop: 1440px
+
+	## Colors
+
+	### Primary
+
+	Very Dark Magenta: hsl(300, 43%, 22%)
+	Soft Pink: hsl(333, 80%, 67%)
+
+	### Neutral
+
+	Dark Grayish Magenta: hsl(303, 10%, 53%)
+	Light Grayish Magenta: hsl(300, 24%, 96%)
+	White: hsl(0, 0%, 100%)
+
+	## Typography
+
+	### Body Copy
+
+	- Font size: 15px
+
+	### Font
+
+	- Family: [Spartan](https://fonts.google.com/specimen/Spartan)
+	- Weights: 400, 500, 700
+
+
 This is a solution to the [Social proof section challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/social-proof-section-6e0qTv_bA). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
 ## Table of contents
@@ -12,9 +46,7 @@ This is a solution to the [Social proof section challenge on Frontend Mentor](ht
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
   - [Useful resources](#useful-resources)
-- [Author](#author)
 - [Acknowledgments](#acknowledgments)
 
 ## Overview
@@ -33,8 +65,8 @@ I added a screenshot of mobile and desktop design found in screenshot folder.
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [erickamae-mateo/social-proof](https://github.com/erickamae-mateo/social-proof/)
+- Live Site URL: [social-proof](https://erickamae-mateo.github.io/social-proof/)
 
 ## My process
 
@@ -48,75 +80,12 @@ I added a screenshot of mobile and desktop design found in screenshot folder.
 - [SASS](https://sass-lang.com/) - CSS Preprocessor
 - [NPM] - Package Manager
 
-### What I learned
-
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
-
-To see how you can add code snippets, see below:
-
-```html
-			<main>
-					<div class="intro">
-							<h1> 10,000+ of our users love our products.</h1>
-							<p class="lead"> We only provide great products combined with excellent customer service. See what our satisfied customers are saying about our services.</p></div>
-						<ul class="ratings flow-content">
-							<li class="rewiew">
-								<div class="stars" aria-hidden="true">
-									<img src="assets/images/icon-star.svg" alt="star">
-									<img src="assets/images/icon-star.svg" alt="star">
-									<img src="assets/images/icon-star.svg" alt="star">
-									<img src="assets/images/icon-star.svg" alt="star">
-									<img src="assets/images/icon-star.svg" alt="star">
-								</div>
-							Rated 5 Stars in Reviews</li>
-						</ul>
-	 		<ul class="quotes split"> 
-	 			<li><blockquote>
-				 	<div class="split a-center">
-				 		<img src="assets/images/image-colton.jpg" alt="colton">
-					 	<div>
-						 	<p class="name">Colton Smith</p>
-						 	<p class="status">Verified Buyer</p>
-					 	</div>
-				 	</div>
-            <p class="quote">"We needed the same printed design as the one we had ordered a week prior. Not only did they find the original order, but we also received it in time. Excellent!"</p>			 
-						</blockquote>
-					</li></ul></main>
-```
-```css
-@media (min-width: 50em){
-
-		main{
-			grid-template-columns: 1fr 1.5fr;
-			text-align: left;
-		}
-		.intro{
-			grid-column: 1 / 2 ;
-
-		}
-		.ratings{
-			grid-column: 2 / 3 ;
-			align-self: center;
-		}
-		.quotes{
-			grid-column: 1 / -1 ;
-		}
-	}
-```
-```js
-
-```
-
-
-
 
 ### Useful resources
 
 - [@use](https://sass-lang.com/) - This helped me for at-rules. The difference between node-sass and dart sass
 - [grid]https://developer.mozilla.org/en-US/docs/Web/CSS/grid) - This is an amazing article which explained the Grid layout and its properties.
 
-## Author
-- Frontend Mentor - [@erickamae-mateo](https://www.frontendmentor.io/profile/erickamae-mateo)
 
 ## Acknowledgments
 
